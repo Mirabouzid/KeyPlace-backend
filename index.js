@@ -4,7 +4,7 @@ const http = require('http');
 const axios = require('axios');
 const cors = require('cors');
 const admin = require("firebase-admin");
-const serviceAccount = require("../backend/serviceAccountKey.json");
+const serviceAccount = require("./serviceAccountKey.json");
 
 
 require('dotenv').config();
