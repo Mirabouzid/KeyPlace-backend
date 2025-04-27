@@ -5,7 +5,7 @@ const axios = require('axios');
 const cors = require('cors');
 const admin = require("firebase-admin");
 const serviceAccount = require("./serviceAccountKey.json");
-
+require('dotenv').config()
 
 require('dotenv').config();
 
@@ -26,7 +26,7 @@ const server = http.createServer(app);
 
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: process.env.CLIENT_URL,
     methods: ['GET', 'POST']
 }));
 

@@ -12,7 +12,7 @@ const db = admin.firestore();
 
 const cors = require('cors');
 
-app.use(cors("http://localhost:3000"));
+app.use(cors(process.env.CLIENT_URL));
 
 
 router.post("/create-checkout-session", async (req, res) => {
